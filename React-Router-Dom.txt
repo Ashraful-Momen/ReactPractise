@@ -1,0 +1,42 @@
+1. >>> npx create-react-app app_name
+
+-------------------------------------
+goto src folder and create >pages>  Blogs.jsx | Contact.jsx | Home.jsx 
+-------------------------------------
+>>> npm install react-router-dom 
+-------------------------------------
+app.js=> 
+------------
+import {Routes,Route, BrowserRouter} from 'react-router-dom'
+//pages
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+import Blogs from './pages/Blogs';
+import Error from './pages/Error';
+
+
+
+
+function App() {
+  return (
+    <div className="App">
+     <BrowserRouter>
+      <Routes>
+        <Route path="/home" element={<Home/>}/>
+        <Route path="/contact" element={<Contact/>}/>
+        <Route path="/blogs" element={<Blogs/>}/>
+        <Route path='*' element={<Error/>}></Route>
+      </Routes>
+     </BrowserRouter>
+    </div>
+  );
+}
+
+export default App;
+
+-------------------------------------
+-------------------------------------
+-------------------------------------
+-------------------------------------
+-------------------------------------
+-------------------------------------
